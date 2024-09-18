@@ -1,0 +1,209 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  transform: perspective(1000px) rotateY(0);
+  transition: transform 1s;
+}
+
+header:hover {
+  transform: perspective(1000px) rotateY(-5deg);
+}
+
+header h1 {
+  font-size: 3rem;
+  animation: slideIn 1.5s ease-out;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+header .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+  background-color: #777;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 3D Section and Card Styling */
+.animated-section {
+  padding: 60px 0;
+  transform: perspective(1000px) rotateX(0);
+  transition: transform 0.5s ease;
+}
+
+.animated-section:hover {
+  transform: perspective(1000px) rotateX(5deg);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.card-3d {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  transform: perspective(1000px) rotateY(0);
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.project:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
+
+.project h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.project p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.project .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project .btn:hover {
+  background-color: #555;
+}
+
+#contact {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  transform: rotateY(0deg) rotateX(0deg);
+  width: 400px;
+}
+
+.contact-card:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-card p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.contact-card ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-card ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-card ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
